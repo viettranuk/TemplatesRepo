@@ -1,0 +1,402 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Standard Newsletter - Aleris Helse">
+    <meta name="author" content="Viet Tran">
+    <title>Standard Newsletter</title>
+    <style>
+        html {
+            display: table;
+            margin: auto;
+        }
+
+        body {
+            width: 100%;
+            color: #000000;
+            font-family: Arial;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .body-content {
+            width: 600px;
+        }
+
+        .pre-top-heading {
+            background-color: #dcdbd6;
+            font-size: 11px;
+            font-weight: bold;
+            border: none;
+            border-bottom: 3px solid #27686c;
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+
+        .top-heading {
+            background-color: #01c6b2;
+            height: 116px;
+            max-height: 116px;
+            display: flex;
+            align-items: center;
+        }
+
+        .top-heading-image {
+            width: 283px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            background-color: #f3f2f0;
+            padding-top: 10px;
+            padding-bottom: 15px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        span.button {
+            display: inline-block;
+        }
+
+        .button {
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            -webkit-box-shadow: 0px 5px 0px 0px rgba(220, 219, 214, 1);
+            -moz-box-shadow: 0px 5px 0px 0px rgba(220, 219, 214, 1);
+            box-shadow: 0px 5px 0px 0px rgba(220, 219, 214, 1);
+            cursor: pointer;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .button-1 {
+            background-color: #27686c;
+        }
+
+        .button-2 {
+            background-color: #fd7b01;
+        }
+
+        .button-3 {
+            background-color: #01c6b2;
+        }
+
+        .button-4 {
+            background-color: #ffcd00;
+        }
+
+        .button-5 {
+            background-color: #0074d7;
+        }
+
+        .button-small {
+            width: 276px;
+            height: 40px;
+            line-height: 40px;
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+        .button-left {
+            margin-right: 4px;
+        }
+
+        .button-right {
+            margin-left: 4px;
+        }
+
+        .article-content {
+            padding: 20px 20px 25px 20px;
+        }
+
+        .cta-icon-1 {
+            display: block;
+            height: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 17px;
+        }
+
+        .cta-button-1 {
+            text-align: center;
+            padding: 0 17px 17px 17px;
+        }
+
+        .cta-icon-2 {
+            display: inline-block;
+            height: 40px;
+            padding: 17px;
+        }
+
+        .cta-button-2 {
+            text-align: left;
+            display: flex;
+            align-items: center;
+            font-family: 'Arial Black';
+            font-size: 18px;
+            font-weight: bold;
+            color: #474b4a;
+            margin-top: 50px;
+        }
+
+        .cta-button-3 {
+            text-align: left;
+            display: flex;
+            align-items: center;
+            font-family: 'Arial Black';
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-top: 15px;
+            margin-bottom: 30px;
+        }
+
+        .image-wrapper {
+            padding-top: 0;
+            padding-bottom: 25px;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            border-bottom: 3px solid #c2e5df;
+        }
+
+        .image-bottom-edge {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 13px 30px 0 30px;
+            border-color: #c2e5df transparent transparent transparent;
+        }
+
+        .article-title {
+            font-family: 'Arial Black';
+            font-size: 24px;
+            font-weight: bold;
+            color: #27686c;
+        }
+
+        .divider {
+            width: 130px;
+            height: 3px;
+            background-color: #c2e5df;
+            content: '';
+            margin: 17px auto;
+        }
+
+        .article-text {
+            font-size: 18px;
+            font-weight: normal;
+            padding-bottom: 34px;
+        }
+
+        .footer-content {
+            background-color: #01c6b2;
+            margin-top: 30px;
+        }
+
+        .social-icon {
+            display: inline-block;
+            height: 40px;
+            padding: 34px 8.5px;
+        }
+
+        .footer-text-1 {
+            font-size: 18px;
+            font-weight: lighter;
+            color: #ffffff;
+            padding: 0 80px 34px 80px;
+        }
+
+        .footer-text-2 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            padding-bottom: 34px;
+        }
+
+        @media (max-width: 576px) {
+
+            .body-content {
+                width: 100% !important;
+            }
+
+            .top-heading-image {
+                width: 85% !important;
+            }
+
+            .cta-buttons {
+                flex-flow: column nowrap !important;
+                padding-top: 15px !important;
+                padding-bottom: 20px !important;
+            }
+
+            .button {
+                font-size: 22px !important;
+            }
+
+            .button-small {
+                width: 100% !important;
+            }
+
+            .button-left {
+                display: block !important;
+                width: 85% !important;
+                margin: 0 0 15px 0 !important;
+            }
+
+            .button-right {
+                display: block !important;
+                width: 85% !important;
+                margin-left: 0 !important;
+            }
+
+            .article-content {
+                padding: 30px 30px 35px 30px !important;
+            }
+
+            .cta-button-2 {
+                text-align: center !important;
+                flex-flow: column nowrap !important;
+                justify-content: center !important;
+                align-items: center !important;
+                padding: 0 17px 17px 17px !important;
+                margin-top: 30px !important;
+            }
+
+            .cta-button-3 {
+                text-align: center !important;
+                flex-flow: column nowrap !important;
+                justify-content: center !important;
+                align-items: center !important;
+                padding: 0 17px 17px 17px !important;
+                margin: 0 0 20px 0 !important;
+            }
+
+            .footer-content {
+                margin-top: 0 !important;
+            }
+
+            .social-icon {
+                height: 50px !important;
+                padding: 34px 8.5px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="body-content">
+        <div class="pre-top-heading">Preheader text: title from 1st article</div>
+        <div class="top-heading">
+            <img src="https://gallery.mailchimp.com/a5df6054294a83aad8fa37f7a/images/aaed6fcd-0a4f-4394-991f-99d9968c063f.png" alt="aleris" class="top-heading-image">
+        </div>
+        <div class="cta-buttons">
+            <a href="http://www.google.co.uk" target="_blank" class="button-left">
+                <span class="button button-1 button-small">Kontakt Oss</span>
+            </a>
+            <a href="http://www.google.co.uk" target="_blank" class="button-right">
+                <span class="button button-1 button-small">Om Aleris</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="body-content">
+
+        <div class="article-content">
+            <div class="image-wrapper">
+                <a href="http://www.google.co.uk" target="_blank">
+                    <img src="https://sundatrails.com/wp-content/uploads/2015/08/Highlights-of-flores-and-rinca-thumb-560x300.jpg" alt="" class="image">
+                </a>
+                <div class="image-bottom-edge"></div>
+            </div>
+            <div class="article-title">Allergivaksinasjon</div>
+            <div class="divider"></div>
+            <div class="article-text">Etter jul er det for sent! Sett allergivaksinen for jul for a fa optimal effeckt ved neste pollensesong.</div>
+            <a href="http://www.google.co.uk" target="_blank">
+                <span class="button button-3 button-small">Les mer</span>
+            </a>
+            <div class="button button-4 cta-button-2">
+                <img src="https://gallery.mailchimp.com/a5df6054294a83aad8fa37f7a/images/b3263e33-fc32-45ec-86a0-5ce725ef4942.png" alt="calendar" class="cta-icon-2">
+                <span>Lei av a vente? Bestill time hos Aleris Rontgen</span>
+            </div>
+        </div>
+
+        <div class="article-content" style="background-color: #f3f2f0">
+            <div class="image-wrapper" style="padding-top: 0">
+                <a href="http://www.google.co.uk" target="_blank">
+                    <img src="https://www.japanjourneys.co.uk/wp-content/uploads/2017/10/Ghent-560x300.jpg" alt="" class="image">
+                </a>
+                <div class="image-bottom-edge"></div>
+            </div>
+            <div class="article-title">BMI: Det ultimate malet?</div>
+            <div class="divider"></div>
+            <div class="article-text">Nar det er snakk om vekt i forbindelse med helse, er BMI et begrep som stadig dukker opp. Det er et tall som gir en indikasjon pa om du er undervektig, normalvektig, overvektig, eller sykelig overvektig.</div>
+            <a href="http://www.google.co.uk" target="_blank">
+                <span class="button button-3 button-small">Les mer</span>
+            </a>
+        </div>
+
+        <div class="article-content">
+            <div class="button button-5 cta-button-3">
+                <img src="https://gallery.mailchimp.com/a5df6054294a83aad8fa37f7a/images/f1b1d273-220d-4169-9609-5f1fa60a3271.png" alt="document" class="cta-icon-2">
+                <span>Les mer helsestoff pa var blogg, Hei Doktor!</span>
+            </div>
+            <div class="image-wrapper">
+                <a href="http://www.google.co.uk" target="_blank">
+                    <img src="http://iffom.com/wp-content/uploads/2017/11/55994f8341d5f885052700kcn8jdl0-560x300.jpg" alt="" class="image">
+                </a>
+                <div class="image-bottom-edge"></div>
+            </div>
+            <div class="article-title">Pasienthistorie</div>
+            <div class="divider"></div>
+            <div class="article-text">Byttet hoftene hos Bjorgul</div>
+            <a href="http://www.google.co.uk" target="_blank">
+                <span class="button button-3 button-small">Les mer</span>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="body-content footer-content">
+        <div>
+            <a href="http://www.google.co.uk" target="_blank">
+                <img src="https://gallery.mailchimp.com/a5df6054294a83aad8fa37f7a/images/ff6bb283-0201-4dab-80ca-a9449e7642ef.png" alt="facebook" class="social-icon">
+            </a>
+            <a href="http://www.google.co.uk" target="_blank">
+                <img src="https://gallery.mailchimp.com/a5df6054294a83aad8fa37f7a/images/aa40678e-6533-44a7-92e9-7dc6da1130e4.png" alt="instagram" class="social-icon">
+            </a>
+            <a href="http://www.google.co.uk" target="_blank">
+                <img src="https://gallery.mailchimp.com/a5df6054294a83aad8fa37f7a/images/437d76d7-7a1f-4b7d-aa20-3cf779972c1a.png" alt="youtube" class="social-icon">
+            </a>
+            <a href="http://www.google.co.uk" target="_blank">
+                <img src="https://gallery.mailchimp.com/a5df6054294a83aad8fa37f7a/images/5ea60e21-d2a6-47a5-af6b-2ea9b4bb1b70.png" alt="twitter" class="social-icon">
+            </a>
+        </div>
+        <div class="footer-text-1">Aleris Helse er Norges ledende private helseforetak med et landsdekkende tilbud av sykehus-og rontgentjenester.</div>
+        <div class="footer-text-2">Aleris.no</div>
+    </div>
+
+</body>
+
+</html>
