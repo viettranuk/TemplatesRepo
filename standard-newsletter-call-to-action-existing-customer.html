@@ -9,7 +9,7 @@
     <meta name="description" content="Standard Newsletter - Aleris Helse">
     <meta name="author" content="Viet Tran">
     <title>Standard Newsletter</title>
-    <style>
+    <style type="text/css">        
         html {
             display: table;
             margin: auto;
@@ -47,25 +47,25 @@
             background-color: #01c6b2;
             height: 116px;
             max-height: 116px;
-            display: flex;
-            align-items: center;
+        }
+
+        .helper {
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
         }
 
         .top-heading-image {
+            height: 56px;
             width: 283px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+            margin: auto;
+            vertical-align: middle;
         }
 
         .cta-buttons {
             background-color: #f3f2f0;
             padding-top: 10px;
             padding-bottom: 15px;
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: center;
-            align-items: center;
         }
 
         span.button {
@@ -140,12 +140,11 @@
             display: inline-block;
             height: 40px;
             padding: 17px;
+            vertical-align: middle;
         }
 
         .cta-button-2 {
             text-align: left;
-            display: flex;
-            align-items: center;
             font-family: 'Arial Black';
             font-size: 18px;
             font-weight: bold;
@@ -155,8 +154,6 @@
 
         .cta-button-3 {
             text-align: left;
-            display: flex;
-            align-items: center;
             font-family: 'Arial Black';
             font-size: 18px;
             font-weight: bold;
@@ -168,9 +165,6 @@
         .image-wrapper {
             padding-top: 34px;
             padding-bottom: 34px;
-            display: flex;
-            flex-flow: column;
-            align-items: center;
         }
 
         .image {
@@ -185,6 +179,7 @@
             border-style: solid;
             border-width: 13px 30px 0 30px;
             border-color: #c2e5df transparent transparent transparent;
+            margin: auto;
         }
 
         .article-title {
@@ -244,9 +239,7 @@
             }
 
             .cta-buttons {
-                flex-flow: column nowrap !important;
-                padding-top: 15px !important;
-                padding-bottom: 20px !important;
+                padding: 15px 30px 20px 30px !important;
             }
 
             .button {
@@ -259,13 +252,13 @@
 
             .button-left {
                 display: block !important;
-                width: 85% !important;
+                width: 100% !important;
                 margin: 0 0 15px 0 !important;
             }
 
             .button-right {
                 display: block !important;
-                width: 85% !important;
+                width: 100% !important;
                 margin-left: 0 !important;
             }
 
@@ -280,18 +273,18 @@
 
             .cta-button-2 {
                 text-align: center !important;
-                flex-flow: column nowrap !important;
-                justify-content: center !important;
-                align-items: center !important;
                 padding: 0 17px 17px 17px !important;
                 margin-top: 30px !important;
             }
 
+            .cta-icon-2 {
+                display: block !important;
+                margin: auto !important;
+            }
+
+
             .cta-button-3 {
                 text-align: center !important;
-                flex-flow: column nowrap !important;
-                justify-content: center !important;
-                align-items: center !important;
                 padding: 0 17px 17px 17px !important;
                 margin: 0 0 20px 0 !important;
             }
@@ -304,10 +297,10 @@
 </head>
 
 <body>
-
-    <div class="body-content">
+    <div class="body-content" mc:edit="standardnewsletterctaheader">
         <div class="pre-top-heading">Preheader text: title from 1st article</div>
         <div class="top-heading">
+            <span class="helper">&nbsp;</span>                
             <img src="https://gallery.mailchimp.com/a5df6054294a83aad8fa37f7a/images/aaed6fcd-0a4f-4394-991f-99d9968c063f.png" alt="aleris" class="top-heading-image">
         </div>
         <div class="cta-buttons">
@@ -319,10 +312,8 @@
             </a>
         </div>
     </div>
-
     <div class="body-content">
-
-        <div class="article-content">
+        <div class="article-content" mc:edit="standardnewsletterctaarticleone">
             <div class="button button-2 cta-button-1">
                 <img src="https://gallery.mailchimp.com/a5df6054294a83aad8fa37f7a/images/6f444f33-a534-43f4-bf83-04f9e3371413.png" alt="exclamation" class="cta-icon-1">
                 <span>Vil du fortsette a fa vart nyhetsbrev om helse?
@@ -345,8 +336,7 @@
                 <span>Lei av a vente? Bestill time hos Aleris Rontgen</span>
             </div>
         </div>
-
-        <div class="article-content" style="background-color: #f3f2f0">
+        <div class="article-content" style="background-color: #f3f2f0" mc:edit="standardnewsletterctaarticletwo">
             <div class="image-wrapper" style="padding-top: 0">
                 <a href="http://www.google.co.uk" target="_blank">
                     <img src="https://www.japanjourneys.co.uk/wp-content/uploads/2017/10/Ghent-560x300.jpg" alt="" class="image">
@@ -360,8 +350,7 @@
                 <span class="button button-3 button-small">Les mer</span>
             </a>
         </div>
-
-        <div class="article-content">
+        <div class="article-content" mc:edit="standardnewsletterctaarticlethree">
             <div class="button button-5 cta-button-3">
                 <img src="https://gallery.mailchimp.com/a5df6054294a83aad8fa37f7a/images/f1b1d273-220d-4169-9609-5f1fa60a3271.png" alt="document" class="cta-icon-2">
                 <span>Les mer helsestoff pa var blogg, Hei Doktor!</span>
@@ -379,10 +368,8 @@
                 <span class="button button-3 button-small">Les mer</span>
             </a>
         </div>
-
     </div>
-
-    <div class="body-content footer-content">
+    <div class="body-content footer-content" mc:edit="standardnewsletterctafooter">
         <div>
             <a href="http://www.google.co.uk" target="_blank">
                 <img src="https://gallery.mailchimp.com/a5df6054294a83aad8fa37f7a/images/ff6bb283-0201-4dab-80ca-a9449e7642ef.png" alt="facebook" class="social-icon">
@@ -400,7 +387,6 @@
         <div class="footer-text-1">Aleris Helse er Norges ledende private helseforetak med et landsdekkende tilbud av sykehus-og rontgentjenester.</div>
         <div class="footer-text-2">Aleris.no</div>
     </div>
-
 </body>
 
 </html>
